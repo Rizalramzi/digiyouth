@@ -1,0 +1,604 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/output.css" rel="stylesheet">
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/navbar.js"></script>
+  <script src="js/scrollbar.js"></script>
+  <title>Digiyouth | SMK Telkom Sidoarjo</title>
+</head>
+<body class="text-dark relative">
+    <nav class="sm:px-[4.271vw] sm:pt-[0.7vw] px-[8.372vw] pt-[9.302vw] pb-[0.9vw] sm:bg-white bg-opacity-0 sm:shadow shadow-none flex justify-between items-center">
+        <div class="flex items-center space-x-[4vw]">
+            <img src="assets/logo.png" alt="" class="sm:w-[10.417vw] sm:h-[3.935vw] w-[34.884vw] h-[13.151vw] object-contain">
+            <ul class="text-[1vw] sm:flex sm:items-center hidden pt-[1vw] space-x-[1vw]">
+                <li><a href="index.html">Beranda</a></li>
+                <li id="kategori-button" class="cursor-pointer">Kategori</li>
+                <li><a href="">Event</a></li>
+            </ul>
+        </div>
+        <div class="pt-[1vw] sm:flex sm:items-center hidden space-x-[0.781vw]">
+            <input type="text" name="" id="" class="w-[23.75vw] h-[3.385vw] border-[0.1vw] border-gray-300 rounded-[0.521vw] text-[0.938vw] placeholder:text-[0.938vw] px-[1vw] outline-none" placeholder="Cari proyek, kategori, atau nama siswa">
+            <button class="py-[1.042vw] px-[2.604vw] bg-main rounded-[0.521vw] text-[1.042vw] font-semibold text-white">Masuk</button>
+        </div>
+        <div id="hamburger" class="sm:hidden">
+            <img src="assets/hamburger.svg" alt="" class="w-[6.047vw] h-[4.535vw]">
+        </div>
+    </nav>
+
+    <div id="kategori" class="absolute hidden left-[10vw] top-[8vw] p-[2vw] bg-white shadow rounded-[0.781vw]">
+        <div class="grid grid-cols-3 gap-[1vw] text-[0.938vw]">
+            <ul class="space-y-[1vw]">
+                <li><a href="">Hacker</a></li>
+                <li><a href="">IoT Engineer</a></li>
+                <li><a href="">Network Engineer</a></li>
+            </ul>
+            <ul class="space-y-[1vw]">
+                <li><a href="">Hipster</a></li>
+                <li><a href="category.html">Cloud Engineer</a></li>
+                <li><a href="">Fiber Optic Engineer</a></li>
+            </ul>
+            <ul class="space-y-[1vw]">
+                <li><a href="">Hustler</a></li>
+                <li><a href="">Graphic Designer</a></li>
+                <li><a href="">System Administrator</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="sidebar" class="absolute  z-30 w-[100vw] h-[216.744vw] px-[8.372vw] py-[5vw] bg-white top-0  rounded-[0.781vw]">
+        <div class="flex relative flex-col items-center justify-center">
+            <img src="assets/logo.png" alt="" class="w-[34.884vw] h-[13.151vw]">
+            <img id="close" src="assets/close.svg" alt="" class="w-[4.186vw] h-[4.186vw] absolute right-[10vw] top-[6vw]">
+            <ul class="flex flex-col justify-center items-center text-[4.186vw] font-medium mt-[5vw] space-y-[3vw]">
+                <li class="w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw]">Beranda</li>
+                <li>
+                    <!-- ID untuk toggle -->
+                    <p id="toggleKategori" class="w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw] nav-active border">
+                        Kategori
+                    </p>
+                    <!-- Div yang akan ditampilkan dengan animasi -->
+                    <div id="kategoriList" class="kategori-list w-full flex flex-col items-center justify-center bg-[#f9f9f9] overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
+                        <ul class="space-y-[6.977vw] flex flex-col items-center justify-center">
+                            <li><a href="">Hacker</a></li>
+                            <li><a href="">IoT Engineer</a></li>
+                            <li><a href="">Network Engineer</a></li>
+                            <li><a href="">Hipster</a></li>
+                            <li><a href="category.html">Cloud Engineer</a></li>
+                            <li><a href="">Fiber Optic Engineer</a></li>
+                            <li><a href="">Hustler</a></li>
+                            <li><a href="">Graphic Design</a></li>
+                            <li><a href="">System Administrator</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw]">Event</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="sm:px-[11.667vw] px-[8.372vw] sm:mt-0 mt-[14.419vw]">
+        <div class="w-full sm:flex sm:items-center block">
+            <div class="sm:w-1/2 w-full">
+                <h4 class="sm:text-[1.042vw] text-[3.256vw] font-semibold text-main">Part of SMK TELKOM SIDOARJO</h4>
+                <div class="sm:space-y-[1.5vw] space-y-[5vw]">
+                    <div class="sm:space-y-[1vw] space-y-[4vw]">
+                        <h1 class="sm:max-w-[34.74vw] sm:text-[3.333vw] max-w-[83.256vw] text-[7.907vw] font-semibold mt-[0.5vw]">Bikin Karya? <br>Yuk, Tunjukin Karyamu!</h1>
+                        <p class="sm:text-[0.938vw] sm:max-w-[29.635vw] max-w-[83.256vw] text-[3.256vw]">Tunjukkan inovasimu di DigiYouth Showcase dan buat dunia melihat potensimu. Jangan lewatkan momen ini, kirimkan karyamu sekarang, dan jadilah pelopor di era digital!</p>
+                    </div>
+                    <button class="sm:py-[1.042vw] sm:px-[2.604vw] py-[4.651vw] px-[11.628vw] bg-main sm:rounded-[0.521vw] sm:text-[1.042vw]  rounded-[2.326vw] text-[3.256vw] font-semibold text-white">Mulai Sekarang</button>
+                </div>
+            </div>
+            <div class="sm:w-1/2 flex sm:justify-end justify-center w-full">
+                <img src="assets/hero.png" alt="" class="sm:w-[36.458vw] sm:h-[35vw] w-[81.395vw] h-[93.826vw] object-contain">
+            </div>
+        </div>
+    </section>
+
+    <section class="sm:px-[11.667vw] px-[8.372vw] sm:mt-[10vw] mt-[15vw] flex items-center justify-center no-scrollbar">
+            <div class="flex flex-col items-center">
+                <div class="bg-main sm:w-[5.208vw] sm:h-[0.521vw] w-[11.628vw] h-[1.163vw]"></div>
+                <h1 class="font-semibold sm:text-[2.865vw] text-[7.907vw]">Eksplor Karya</h1>
+                <div class="grid sm:grid-cols-3 grid-cols-2 sm:px-[10vw] px-0 sm:gap-[1.302vw] gap-[3.488vw] mt-[3vw]">
+                    <div class="flex justify-center items-center">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[40.465vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/hacker.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[6.977vw] h-[6.977vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">Hacker</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[40.465vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/hipster.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[5.814vw] h-[5.814vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">Hipster</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[40.465vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/hustler.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[6.977vw] h-[6.977vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">Hustler</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[40.465vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/iot.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[6.977vw] h-[6.977vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">IoT Engineer</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center sm:col-span-1   col-span-2">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[83.023vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/graphic.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[8.14vw] h-[8.14vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">Graphic Designer</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center sm:col-span-1   col-span-2">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[83.023vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/cloud.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[6.977vw] h-[6.977vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">Cloud Engineer</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center sm:col-span-1   col-span-2">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[83.023vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/network.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[6.977vw] h-[6.977vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">Network Engineer</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center sm:col-span-1   col-span-2">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[83.023vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/fiber-optic.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[6.977vw] h-[6.977vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">Fiber Optic Engineer</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center sm:col-span-1   col-span-2">
+                        <div>
+                            <div class="bg-main p-[0.521vw] sm:w-[18.229vw] sm:h-[5.208vw] w-[83.023vw] h-[18.605vw] flex items-center justify-center sm:space-x-[0.521vw] space-x-[2.326vw] sm:rounded-[0.781vw] rounded-[3.488vw]">
+                                <img src="assets/sysad.svg" alt="" class="sm:w-[1.823vw] sm:h-[1.823vw] w-[6.977vw] h-[6.977vw]">
+                                <h1 class="sm:text-[1.146vw] text-[4.186vw] font-semibold text-white">System Administrator</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="ps-[11.667vw] sm:mt-[10vw] mt-[20vw]">
+        <div>
+            <div class="flex sm:items-center items-end justify-between sm:pe-[11.667vw] pe-[8.372vw]">
+                <div>
+                    <div class="bg-main sm:w-[5.208vw] sm:h-[0.521vw] w-[11.628vw] h-[1.163vw]"></div>
+                    <h1 class="font-semibold sm:text-[2.865vw] text-[7.907vw]">Terpopuler Minggu Ini</h1>
+                </div>
+                <div class="flex space-x-[2vw]">
+                    <div id="left-arrow1" class="bg-gray-100 sm:p-[1.5vw] py-[3vw] px-[5vw] rounded-full cursor-pointer">
+                        <img src="assets/arrow.svg" alt="" class="sm:w-[1.7vw] sm:h-[1.8vw] w-[9vw] h-[10vw]">
+                    </div>
+                    <div id="right-arrow1" class="bg-gray-100 sm:p-[1.5vw] py-[3vw] px-[5vw] rounded-full cursor-pointer">
+                        <img src="assets/arrow.svg" alt="" class="sm:w-[1.7vw] sm:h-[1.8vw] w-[9vw] h-[10vw] rotate-180">
+                    </div>
+                    
+                </div>                
+            </div>
+            
+            <!-- Container card yang bisa di-scroll secara horizontal -->
+            <div id="popular-works-slider" class="mt-[3vw] flex items-center sm:gap-x-[1vw] gap-x-[4vw] overflow-x-auto scrollbar-hidden scroll-smooth pe-[3vw]">
+                <!-- Card 1 -->
+                <div class="relative group flex-shrink-0 sm:w-[37.24vw] w-[83.256vw]"> <!-- flex-shrink-0 mencegah card mengecil -->
+                    <img src="assets/karya.png" alt="" class="sm:w-[37.24vw] sm:h-[24.531vw] w-[83.256vw] h-[55.542vw] object-cover rounded-[1.563vw]">
+                    
+                    <!-- Overlay dan informasi profile yang muncul saat hover -->
+                    <div class="sm:w-[37.24vw] sm:h-[14.2655vw] w-[83.256vw] h-[31.207vw] absolute sm:bottom-[7.5vw] bottom-[16.6vw] rounded-[1.563vw] bg-gradient-to-t from-black/70 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="flex items-center absolute sm:bottom-[10vw] bottom-[22vw] left-[5vw] sm:space-x-[1vw] space-x-[2vw] z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <img src="assets/profile-picture.png" alt="" class="sm:w-[2.604vw] sm:h-[2.604vw] w-[8.14vw] h-[8.14vw]">
+                        <p class="sm:text-[1.25vw] text-[3.256vw] text-white font-semibold">Indayani Pratama</p>
+                    </div>
+                    <div class="absolute bg-white sm:w-[5.208vw] sm:h-[5.208vw] w-[11.628vw] h-[11.628vw] rounded-full top-[1.5vw] left-[2vw] flex items-center justify-center">
+                        <h1 class="sm:text-[2.083vw] text-[5.581vw] font-semibold text-yellow-400 ">#1</h1>
+                    </div>
+                    
+                    <div class="flex space-x-[1vw] mt-[2vw] sm:justify-start justify-between">
+                        <h1 class="sm:text-[1.875vw] text-[4.651vw] font-semibold">UI/UX Design Competition</h1>
+                        <p class="sm:text-[1.042vw] sm:px-[1.563vw] sm:py-[0.781vw] text-[2.791vw] px-[5.814vw] py-[2.326vw] bg-main bg-opacity-5 rounded-full text-main font-bold">Hipster</p>
+                    </div>
+                    <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.9vw]">
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/thumb.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">200</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/view.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/share.svg" alt="" class="sm:w-[1.302vw] sm:h-[1.14vw] w-[4.651vw] h-[4.07vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="relative group flex-shrink-0 sm:w-[37.24vw] w-[83.256vw]"> <!-- flex-shrink-0 mencegah card mengecil -->
+                    <img src="assets/karya-2.png" alt="" class="sm:w-[37.24vw] sm:h-[24.531vw] w-[83.256vw] h-[55.542vw] object-cover rounded-[1.563vw]">
+                    
+                    <!-- Overlay dan informasi profile yang muncul saat hover -->
+                    <div class="sm:w-[37.24vw] sm:h-[14.2655vw] w-[83.256vw] h-[31.207vw] absolute sm:bottom-[7.5vw] bottom-[16.6vw] rounded-[1.563vw] bg-gradient-to-t from-black/70 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="flex items-center absolute sm:bottom-[10vw] bottom-[22vw] left-[5vw] sm:space-x-[1vw] space-x-[2vw] z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <img src="assets/profile-picture.png" alt="" class="sm:w-[2.604vw] sm:h-[2.604vw] w-[8.14vw] h-[8.14vw]">
+                        <p class="sm:text-[1.25vw] text-[3.256vw] text-white font-semibold">Indayani Pratama</p>
+                    </div>
+                    <div class="absolute bg-[#F9F9F9] sm:w-[5.208vw] sm:h-[5.208vw] w-[11.628vw] h-[11.628vw] rounded-full top-[1.5vw] left-[2vw] flex items-center justify-center">
+                        <h1 class="sm:text-[2.083vw] text-[5.581vw] font-semibold text-[#8B8B8B] ">#2</h1>
+                    </div>
+                    
+                    <div class="flex space-x-[1vw] mt-[2vw] sm:justify-start justify-between">
+                        <h1 class="sm:text-[1.875vw] text-[4.651vw] font-semibold">UI/UX Design Competition</h1>
+                        <p class="sm:text-[1.042vw] sm:px-[1.563vw] sm:py-[0.781vw] text-[2.791vw] px-[5.814vw] py-[2.326vw] bg-main bg-opacity-5 rounded-full text-main font-bold">Hipster</p>
+                    </div>
+                    <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.9vw]">
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/thumb.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">200</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/view.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/share.svg" alt="" class="sm:w-[1.302vw] sm:h-[1.14vw] w-[4.651vw] h-[4.07vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="relative group flex-shrink-0 sm:w-[37.24vw] w-[83.256vw]"> <!-- flex-shrink-0 mencegah card mengecil -->
+                    <img src="assets/karya-3.png" alt="" class="sm:w-[37.24vw] sm:h-[24.531vw] w-[83.256vw] h-[55.542vw] object-cover rounded-[1.563vw]">
+                    
+                    <!-- Overlay dan informasi profile yang muncul saat hover -->
+                    <div class="sm:w-[37.24vw] sm:h-[14.2655vw] w-[83.256vw] h-[31.207vw] absolute sm:bottom-[7.5vw] bottom-[16.6vw] rounded-[1.563vw] bg-gradient-to-t from-black/70 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="flex items-center absolute sm:bottom-[10vw] bottom-[22vw] left-[5vw] sm:space-x-[1vw] space-x-[2vw] z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <img src="assets/profile-picture.png" alt="" class="sm:w-[2.604vw] sm:h-[2.604vw] w-[8.14vw] h-[8.14vw]">
+                        <p class="sm:text-[1.25vw] text-[3.256vw] text-white font-semibold">Indayani Pratama</p>
+                    </div>
+                    <div class="absolute bg-white sm:w-[5.208vw] sm:h-[5.208vw] w-[11.628vw] h-[11.628vw] rounded-full top-[1.5vw] left-[2vw] flex items-center justify-center">
+                        <h1 class="sm:text-[2.083vw] text-[5.581vw] font-semibold text-[#895125]">#3</h1>
+                    </div>
+                    
+                    <div class="flex space-x-[1vw] mt-[2vw] sm:justify-start justify-between">
+                        <h1 class="sm:text-[1.875vw] text-[4.651vw] font-semibold">UI/UX Design Competition</h1>
+                        <p class="sm:text-[1.042vw] sm:px-[1.563vw] sm:py-[0.781vw] text-[2.791vw] px-[5.814vw] py-[2.326vw] bg-main bg-opacity-5 rounded-full text-main font-bold">Hipster</p>
+                    </div>
+                    <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.9vw]">
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/thumb.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">200</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/view.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/share.svg" alt="" class="sm:w-[1.302vw] sm:h-[1.14vw] w-[4.651vw] h-[4.07vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="relative group flex-shrink-0 sm:w-[37.24vw] w-[83.256vw]"> <!-- flex-shrink-0 mencegah card mengecil -->
+                    <img src="assets/karya.png" alt="" class="sm:w-[37.24vw] sm:h-[24.531vw] w-[83.256vw] h-[55.542vw] object-cover rounded-[1.563vw]">
+                    
+                    <!-- Overlay dan informasi profile yang muncul saat hover -->
+                    <div class="sm:w-[37.24vw] sm:h-[14.2655vw] w-[83.256vw] h-[31.207vw] absolute sm:bottom-[7.5vw] bottom-[16.6vw] rounded-[1.563vw] bg-gradient-to-t from-black/70 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="flex items-center absolute sm:bottom-[10vw] bottom-[22vw] left-[5vw] sm:space-x-[1vw] space-x-[2vw] z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <img src="assets/profile-picture.png" alt="" class="sm:w-[2.604vw] sm:h-[2.604vw] w-[8.14vw] h-[8.14vw]">
+                        <p class="sm:text-[1.25vw] text-[3.256vw] text-white font-semibold">Indayani Pratama</p>
+                    </div>
+                    
+                    <div class="flex space-x-[1vw] mt-[2vw] sm:justify-start justify-between">
+                        <h1 class="sm:text-[1.875vw] text-[4.651vw] font-semibold">UI/UX Design Competition</h1>
+                        <p class="sm:text-[1.042vw] sm:px-[1.563vw] sm:py-[0.781vw] text-[2.791vw] px-[5.814vw] py-[2.326vw] bg-main bg-opacity-5 rounded-full text-main font-bold">Hipster</p>
+                    </div>
+                    <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.9vw]">
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/thumb.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">200</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/view.svg" alt="" class="sm:w-[1.563vw] sm:h-[1.555vw] w-[4.651vw] h-[4.651vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                        <div class="flex items-center sm:space-x-[0.6vw] space-x-[2.326vw]">
+                            <img src="assets/share.svg" alt="" class="sm:w-[1.302vw] sm:h-[1.14vw] w-[4.651vw] h-[4.07vw]">
+                            <p class="sm:text-[0.938vw] text-[3.256vw] text-gray-400 font-semibold">1.100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section class="sm:px-[11.667vw] px-[8vw] sm:mt-[10vw] mt-[17.674vw]  overflow-hidden relative" >
+        <div class="flex justify-center items-center">
+            <div class="bg-main sm:w-[5.208vw] sm:h-[0.521vw] w-[11.628vw] h-[1.163vw]"></div>
+        </div>
+        <h1 class="font-semibold sm:text-[2.865vw] text-[7.907vw] text-center">Kontributor Terpopuler</h1>
+        <div id="slider" class="flex items-center sm:mt-[3vw] mt-[8vw] sm:gap-x-[0.5vw] gap-x-[4.651vw] overflow-x-auto flex-nowrap max-w-full scrollbar-hidden scroll-smooth">
+            <div class="border border-gray-300 sm:w-[18.385vw] sm:h-[17.292vw] w-[39.302vw] h-[36.965vw] sm:rounded-[0.781vw] rounded-[3.488vw] flex flex-col justify-center items-center space-y-[1.4vw] flex-shrink-0">
+                <img src="assets/profile-picture.png" alt="" class="sm:w-[7.419vw] sm:h-[7.419vw] w-[16.279vw] h-[16.279vw] object-cover">
+                <h1 class="sm:text-[1.042vw] text-[3.256vw] font-semibold">Indayani Pratama</h1>
+                <p class="sm:text-[0.938vw] text-[2.791vw] opacity-50 font-medium">XII TJA 1</p>
+            </div>
+            <div class="border border-gray-300 sm:w-[18.385vw] sm:h-[17.292vw] w-[39.302vw] h-[36.965vw] sm:rounded-[0.781vw] rounded-[3.488vw] flex flex-col justify-center items-center space-y-[1.4vw] flex-shrink-0">
+                <img src="assets/profile-picture.png" alt="" class="sm:w-[7.419vw] sm:h-[7.419vw] w-[16.279vw] h-[16.279vw] object-cover">
+                <h1 class="sm:text-[1.042vw] text-[3.256vw] font-semibold">Indayani Pratama</h1>
+                <p class="sm:text-[0.938vw] text-[2.791vw] opacity-50 font-medium">XII TJA 1</p>
+            </div>
+            <div class="border border-gray-300 sm:w-[18.385vw] sm:h-[17.292vw] w-[39.302vw] h-[36.965vw] sm:rounded-[0.781vw] rounded-[3.488vw] flex flex-col justify-center items-center space-y-[1.4vw] flex-shrink-0">
+                <img src="assets/profile-picture.png" alt="" class="sm:w-[7.419vw] sm:h-[7.419vw] w-[16.279vw] h-[16.279vw] object-cover">
+                <h1 class="sm:text-[1.042vw] text-[3.256vw] font-semibold">Indayani Pratama</h1>
+                <p class="sm:text-[0.938vw] text-[2.791vw] opacity-50 font-medium">XII TJA 1</p>
+            </div>
+            <div class="border border-gray-300 sm:w-[18.385vw] sm:h-[17.292vw] w-[39.302vw] h-[36.965vw] sm:rounded-[0.781vw] rounded-[3.488vw] flex flex-col justify-center items-center space-y-[1.4vw] flex-shrink-0">
+                <img src="assets/profile-picture.png" alt="" class="sm:w-[7.419vw] sm:h-[7.419vw] w-[16.279vw] h-[16.279vw] object-cover">
+                <h1 class="sm:text-[1.042vw] text-[3.256vw] font-semibold">Indayani Pratama</h1>
+                <p class="sm:text-[0.938vw] text-[2.791vw] opacity-50 font-medium">XII TJA 1</p>
+            </div>
+        </div>
+        <div id="left-arrow" class="absolute sm:top-[13.5vw] sm:left-[9.5vw] top-[31vw] left-[2vw] bg-gray-100 sm:p-[1.5vw] p-[5vw] rounded-full cursor-pointer">
+            <img src="assets/arrow.svg" alt="" class="sm:w-[1.7vw] sm:h-[1.8vw] w-[3vw] h-[4vw]">
+        </div>
+        <div id="right-arrow" class="absolute sm:top-[13.5vw] sm:right-[9.5vw] top-[31vw] right-[2vw] bg-gray-100 sm:p-[1.5vw] p-[5vw] rounded-full cursor-pointer">
+            <img src="assets/arrow.svg" alt="" class="sm:w-[1.7vw] sm:h-[1.8vw] w-[3vw] h-[4vw] rotate-180">
+        </div>
+    </section>
+
+    <section class="sm:mt-[10vw] mt-[21.86vw]">
+        <div class="w-full relative">
+            <!-- Gambar background waves -->
+            <img src="assets/bg-waves.png" alt="" class="absolute inset-0 w-full h-full object-cover z-0">
+            
+            <!-- Konten di depan, termasuk gambar wanita -->
+            <div class="relative w-full z-20 px-[3vw] flex sm:flex-row flex-col-reverse">
+                <div class="sm:w-1/2 w-full flex items-center justify-center">
+                    <img src="assets/woman-1.png" alt="" class="sm:w-[36.302vw] sm:h-[41.771vw] w-[81.395vw] h-[93.658vw]">
+                </div>
+                <div class="sm:w-1/2 w-full pt-[8vw] flex flex-col items-center sm:space-y-[1vw] space-y-[5vw]">
+                    <h1 class="sm:text-[2.865vw] text-[7.907vw] font-semibold text-center sm:max-w-[24.271vw] max-w-[64.884vw]">Take The Stage and Impress the World!</h1>
+                    <button class="sm:py-[1.042vw] sm:px-[2.604vw] py-[4.651vw] px-[11.628vw] bg-main sm:rounded-[0.521vw] sm:text-[1.042vw]  rounded-[2.326vw] text-[3.256vw] font-semibold text-white">Mulai Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="sm:mt-[5vw] mt-[15vw]">
+        <div class="bg-white py-[2vw] px-[3vw]">
+            <div class="grid sm:grid-cols-5 grid-cols-1 gap-x-[2vw] sm:gap-y-0 gap-y-[6.977vw] sm:px-0 px-[8.372vw]">
+                <div class="space-y-[1.5vw] sm:inline hidden">
+                    <img src="assets/logo.png" alt="" class="w-[11.406vw] h-[4.115vw]">
+                    <p class="text-[1.042vw]">Ready to take the next step? Submit your project and let your skills shine.</p>
+                    <div class="flex space-x-[1vw]">
+                        <img src="assets/website.svg" alt="" class="w-[1.563vw] h-[1.563vw]">
+                        <img src="assets/instagram.svg" alt="" class="w-[1.563vw] h-[1.563vw]">
+                        <img src="assets/facebook.svg" alt="" class="w-[1.563vw] h-[1.563vw]">
+                    </div>
+                    <p class="text-[1.042vw]">Copyright © 2024 All right reserved | Skomda</p>
+                </div>
+                <div class="mt-[2vw] flex justify-center ">
+                    <ul class="sm:text-[1.25vw] text-[4.186vw] sm:space-y-[1.563vw] space-y-[4.651vw] sm:block flex flex-col items-center justify-center">
+                        <li class="font-semibold sm:mb-[0.313vw] mb-[2,326]">Menu Utama</li>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li>Kategori</li>
+                        <li>Event</li>
+                    </ul>
+                </div>
+                <div class="mt-[2vw] flex justify-center">
+                    <ul class="sm:text-[1.25vw] text-[4.186vw] sm:space-y-[1.563vw] space-y-[4.651vw] sm:block flex flex-col items-center justify-center">
+                        <li class="font-semibold sm:mb-[0.313vw] mb-[2,326]">Explore</li>
+                        <li><a href="">Hacker</a></li>
+                        <li><a href="">Hipster</a></li>
+                        <li><a href="">Hustler</a></li>
+                        <li><a href="">IoT Engineer</a></li>
+                        <li><a href="">Cloud Engineer</a></li>
+                        <li><a href="">Graphic Designer</a></li>
+                        <li><a href="">Network Engineer</a></li>
+                        <li><a href="">Fiber Optic Engineer</a></li>
+                    </ul>
+                </div>
+                <div class="mt-[2vw] flex justify-center">
+                    <ul class="sm:text-[1.25vw] text-[4.186vw] sm:space-y-[1.563vw] space-y-[4.651vw] sm:block flex flex-col items-center justify-center">
+                        <li class="font-semibold sm:mb-[0.313vw] mb-[2,326]">Aplikasi Siswa</li>
+                        <li>Digiyouth Showcase</li>
+                        <li>MyLMS</li>
+                        <li>Siakad</li>
+                    </ul>
+                </div>
+                <div class="mt-[2vw] flex justify-center">
+                    <ul class="sm:text-[1.25vw] text-[4.186vw] sm:space-y-[1.563vw] space-y-[4.651vw] sm:block flex flex-col items-center justify-center">
+                        <li class="font-semibold sm:mb-[0.313vw] mb-[2,326]">Hubungi Kami</li>
+                        <li>+123456789</li>
+                        <li>skomda@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="space-y-[6vw] sm:hidden flex flex-col items-center justify-center">
+                    <a href="index.html"><img src="assets/logo.png" alt="" class="w-[46.512vw] h-[16.779vw]"></a>
+                    <p class="text-[3.256vw] text-center">Ready to take the next step? Submit your project and let your skills shine.</p>
+                    <div class="flex space-x-[5vw]">
+                        <img src="assets/website.svg" alt="" class="w-[5.5vw] h-[5.5vw]">
+                        <img src="assets/instagram.svg" alt="" class="w-[5.5vw] h-[5.5vw]">
+                        <img src="assets/facebook.svg" alt="" class="w-[5.5vw] h-[5.5vw]">
+                    </div>
+                    <p class="text-[3.256vw]">Copyright © 2024 All right reserved | Skomda</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+<script>
+    document.getElementById('kategori-button').addEventListener('click', function() {
+        var kategoriDiv = document.getElementById('kategori');
+        if (kategoriDiv.classList.contains('hidden')) {
+            kategoriDiv.classList.remove('hidden');
+        } else {
+            kategoriDiv.classList.add('hidden');
+        }
+    });
+</script>
+
+
+<script>
+    // Ambil elemen slider
+    const slider = document.getElementById('slider');
+    
+    // Tombol panah kiri dan kanan
+    const leftArrow = document.getElementById('left-arrow');
+    const rightArrow = document.getElementById('right-arrow');
+    
+    // Fungsi untuk mengonversi nilai vw ke piksel
+    function vwToPx(vw) {
+        return (vw / 100) * window.innerWidth; // Konversi nilai vw ke px berdasarkan lebar viewport
+    }
+
+    // Ambil lebar card dalam satuan vw (misalnya 18.385vw)
+    let cardWidthVW = 18.385;
+    let cardWidth = vwToPx(cardWidthVW); // Konversi cardWidth ke piksel
+
+    // Fungsi untuk sliding ke kiri
+    leftArrow.addEventListener('click', () => {
+        slider.scrollBy({
+            left: -cardWidth, // Geser ke kiri sebesar lebar 1 card
+            behavior: 'smooth'
+        });
+    });
+
+    // Fungsi untuk sliding ke kanan
+    rightArrow.addEventListener('click', () => {
+        slider.scrollBy({
+            left: cardWidth, // Geser ke kanan sebesar lebar 1 card
+            behavior: 'smooth'
+        });
+    });
+
+    // Update lebar card saat ukuran jendela berubah
+    window.addEventListener('resize', () => {
+        cardWidth = vwToPx(cardWidthVW); // Update lebar card saat ukuran viewport berubah
+    });
+</script>
+
+
+<script>
+    // Ambil elemen slider dengan ID yang baru
+    const popularWorksSlider = document.getElementById('popular-works-slider');
+    
+    // Tombol panah kiri dan kanan
+    const leftArrow1 = document.getElementById('left-arrow1');
+    const rightArrow1 = document.getElementById('right-arrow1');
+    
+    // Fungsi untuk mengonversi nilai vw ke piksel
+    function vwToPx(vw) {
+        return (vw / 100) * window.innerWidth;
+    }
+
+    // Ambil lebar card dalam satuan vw
+    const cardWidthVW1 = 37.24;
+    const cardWidth1 = vwToPx(cardWidthVW1);
+
+    // Fungsi untuk sliding ke kiri
+    leftArrow1.addEventListener('click', () => {
+        popularWorksSlider.scrollBy({
+            left: -cardWidth1,
+            behavior: 'smooth'
+        });
+    });
+
+    // Fungsi untuk sliding ke kanan
+    rightArrow1.addEventListener('click', () => {
+        popularWorksSlider.scrollBy({
+            left: cardWidth1,
+            behavior: 'smooth'
+        });
+    });
+
+    // Update scroll width saat window resize
+    window.addEventListener('resize', () => {
+        cardWidth1 = vwToPx(cardWidthVW1);
+    });
+</script>
+<script>
+    const sidebar = document.getElementById('sidebar');
+    const hamburgerBtn = document.getElementById('hamburger');
+    const closeBtn = document.getElementById('close');
+
+    // Fungsi untuk membuka sidebar
+    function openSidebar() {
+        sidebar.classList.add('open');
+        document.body.classList.add('no-scroll');
+        
+        // Optional: Tambahkan overlay
+        const overlay = document.createElement('div');
+        overlay.classList.add('sidebar-overlay');
+        document.body.appendChild(overlay);
+        
+        // Trigger reflow untuk animasi
+        overlay.offsetHeight;
+        overlay.classList.add('active');
+    }
+
+    // Fungsi untuk menutup sidebar
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+        
+        // Optional: Hapus overlay dengan animasi
+        const overlay = document.querySelector('.sidebar-overlay');
+        if (overlay) {
+            overlay.classList.remove('active');
+            overlay.addEventListener('transitionend', () => {
+                overlay.remove();
+            });
+        }
+    }
+
+    // Event listeners untuk hamburger button dan close button
+    hamburgerBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+
+</script>
+
+<script>
+    const toggleKategori = document.getElementById('toggleKategori');
+    const kategoriList = document.getElementById('kategoriList');
+
+    toggleKategori.addEventListener('click', function() {
+        kategoriList.classList.toggle('active');  // Toggle kelas active
+        toggleKategori.classList.toggle('border-main');  // Toggle border utama
+    });
+</script>
+
+</html>
