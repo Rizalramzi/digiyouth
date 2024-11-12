@@ -3,7 +3,7 @@
 h1, button{
     font-family: 'Outfit';
 }
-p, li, h3{
+p, li, h3, textarea, input{
     font-family: 'Inter';
 }
 h4{

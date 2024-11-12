@@ -10,50 +10,52 @@
     <title>Cloud Computing</title>
 </head>
 <body class="text-dark relative">
-    <nav class="sm:px-[4.271vw] sm:pt-[0.7vw] px-[8.372vw] pt-[9.302vw] pb-[0.9vw] sm:bg-white bg-opacity-0 sm:shadow shadow-none flex justify-between items-center">
+    <nav class="w-full fixed sm:px-[4.271vw] sm:pt-[0.7vw] sm:pb-[1.8vw] px-[8.372vw] pt-[5vw] pb-[6vw] bg-white z-40 sm:shadow shadow-none flex justify-between items-center top-0">
         <div class="flex items-center space-x-[4vw]">
             <img src="assets/logo.png" alt="" class="sm:w-[10.417vw] sm:h-[3.935vw] w-[34.884vw] h-[13.151vw] object-contain">
-            <ul class="text-[1vw] sm:flex sm:items-center hidden pt-[1vw] space-x-[1vw]">
-                <li><a href="index.html">Beranda</a></li>
-                <li id="kategori-button" class="cursor-pointer">Kategori</li>
-                <li><a href="">Event</a></li>
+            <ul class="text-[1vw] sm:flex sm:items-center hidden pt-[1vw] space-x-[2vw]">
+                <li class="hover:text-main transition-all duration-300 ease-in-out"><a href="index.html">Beranda</a></li>
+                <!-- Menambahkan class group pada kategori-button -->
+                <li id="kategori-button" class="cursor-pointer group relative"><p class="hover:text-main transition-all duration-300 ease-in-out">Kategori</p>
+                    <!-- Div kategori dengan peer-hover untuk muncul saat kategori-button di-hover -->
+                    <div id="kategori" class="absolute hidden group-hover:flex left-0 top-[1vw] mt-2 p-[2vw] bg-white shadow rounded-[0.781vw] w-[35vw]">
+                        <div class="grid grid-cols-3 gap-[1vw] text-[0.938vw]">
+                            <ul class="space-y-[1vw]">
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">Hacker</a></li>
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">IoT Engineer</a></li>
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">Network Engineer</a></li>
+                            </ul>
+                            <ul class="space-y-[1vw]">
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">Hipster</a></li>
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="category.html">Cloud Engineer</a></li>
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">Fiber Optic Engineer</a></li>
+                            </ul>
+                            <ul class="space-y-[1vw]">
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">Hustler</a></li>
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">Graphic Designer</a></li>
+                                <li class="hover:text-main ease-in-out duration-300 transition-all"><a href="">System Administrator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="hover:text-main transition-all duration-300 ease-in-out"><a href="">Event</a></li>
             </ul>
         </div>
         <div class="pt-[1vw] sm:flex sm:items-center hidden space-x-[0.781vw]">
             <input type="text" name="" id="" class="w-[23.75vw] h-[3.385vw] border-[0.1vw] border-gray-300 rounded-[0.521vw] text-[0.938vw] placeholder:text-[0.938vw] px-[1vw] outline-none" placeholder="Cari proyek, kategori, atau nama siswa">
-            <button class="py-[1.042vw] px-[2.604vw] bg-main rounded-[0.521vw] text-[1.042vw] font-semibold text-white">Masuk</button>
+            <button class="py-[0.95vw] px-[2.604vw] bg-main rounded-[0.521vw] text-[1.042vw] font-semibold text-white">Masuk</button>
         </div>
-        <div id="hamburger" class="sm:hidden">
-            <img src="assets/hamburger.svg" alt="" class="w-[6.047vw] h-[4.535vw]">
+        <div id="hamburger" class="sm:hidden pt-[3vw]">
+            <img src="assets/hamburger.svg" alt="" class=" w-[6.047vw] h-[4.535vw]">
         </div>
     </nav>
 
-    <div id="kategori" class="absolute hidden left-[10vw] top-[8vw] p-[2vw] bg-white shadow rounded-[0.781vw]">
-        <div class="grid grid-cols-3 gap-[1vw] text-[0.938vw]">
-            <ul class="space-y-[1vw]">
-                <li><a href="">Hacker</a></li>
-                <li><a href="">IoT Engineer</a></li>
-                <li><a href="">Network Engineer</a></li>
-            </ul>
-            <ul class="space-y-[1vw]">
-                <li><a href="">Hipster</a></li>
-                <li><a href="category.html">Cloud Engineer</a></li>
-                <li><a href="">Fiber Optic Engineer</a></li>
-            </ul>
-            <ul class="space-y-[1vw]">
-                <li><a href="">Hustler</a></li>
-                <li><a href="">Graphic Designer</a></li>
-                <li><a href="">System Administrator</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div id="sidebar" class="absolute  z-30 w-[100vw] h-[216.744vw] px-[8.372vw] py-[5vw] bg-white top-0  rounded-[0.781vw]">
+    <div id="sidebar" class="absolute  z-30 w-[100vw] h-[216.744vw] px-[8.372vw] py-[6vw] bg-white top-0  rounded-[0.781vw]">
         <div class="flex relative flex-col items-center justify-center">
             <img src="assets/logo.png" alt="" class="w-[34.884vw] h-[13.151vw]">
-            <img id="close" src="assets/close.svg" alt="" class="w-[4.186vw] h-[4.186vw] absolute right-[10vw] top-[6vw]">
+            <img id="close" src="assets/close.svg" alt="" class="w-[4.186vw] h-[4.186vw] absolute right-[4vw] top-[6vw]">
             <ul class="flex flex-col justify-center items-center text-[4.186vw] font-medium mt-[5vw] space-y-[3vw]">
-                <li class="w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw]"><a href="index.html">Beranda</a></li>
+                <li class="w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw]">Beranda</li>
                 <li>
                     <!-- ID untuk toggle -->
                     <p id="toggleKategori" class="w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw] nav-active border">
@@ -74,13 +76,13 @@
                         </ul>
                     </div>
                 </li>
-                <li class="w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw]">Event</li>
+                <li class=" w-[83.256vw] h-[13.023vw] flex justify-center items-center rounded-[2vw]">Event</li>
             </ul>
         </div>
     </div>
 
     
-    <section class="sm:mt-[6vw] mt-[15vw] sm:px-[11.667vw] ">
+    <section class="sm:mt-[10vw] mt-[30vw] sm:px-[11.667vw] ">
         <div class="w-full flex flex-col justify-center items-center sm:space-y-[1vw] space-y-[4vw]">
             <div class=" flex flex-col justify-center items-center">
                 <div class="bg-main sm:w-[5.208vw] sm:h-[0.521vw] w-[11.628vw] h-[1.163vw]"></div>
@@ -130,7 +132,7 @@
                 </div>
                 
                 <div class="flex justify-between sm:mt-[1vw] mt-[3vw] items-center">
-                    <h1 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h1>
+                    <h3 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h3>
                     <p class="sm:text-[0.833vw] text-[2.791vw] sm:p-[0.521vw] p-[2.326vw] bg-opacity-5 bg-main rounded-full text-main font-semibold">Cloud Engineer</p>
                 </div>
                 <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.5vw]">
@@ -159,7 +161,7 @@
                 </div>
                 
                 <div class="flex justify-between sm:mt-[1vw] mt-[3vw] items-center">
-                    <h1 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h1>
+                    <h3 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h3>
                     <p class="sm:text-[0.833vw] text-[2.791vw] sm:p-[0.521vw] p-[2.326vw] bg-opacity-5 bg-main rounded-full text-main font-semibold">Cloud Engineer</p>
                 </div>
                 <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.5vw]">
@@ -188,7 +190,7 @@
                 </div>
                 
                 <div class="flex justify-between sm:mt-[1vw] mt-[3vw] items-center">
-                    <h1 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h1>
+                    <h3 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h3>
                     <p class="sm:text-[0.833vw] text-[2.791vw] sm:p-[0.521vw] p-[2.326vw] bg-opacity-5 bg-main rounded-full text-main font-semibold">Cloud Engineer</p>
                 </div>
                 <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.5vw]">
@@ -217,7 +219,7 @@
                 </div>
                 
                 <div class="flex justify-between sm:mt-[1vw] mt-[3vw] items-center">
-                    <h1 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h1>
+                    <h3 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h3>
                     <p class="sm:text-[0.833vw] text-[2.791vw] sm:p-[0.521vw] p-[2.326vw] bg-opacity-5 bg-main rounded-full text-main font-semibold">Cloud Engineer</p>
                 </div>
                 <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.5vw]">
@@ -246,7 +248,7 @@
                 </div>
                 
                 <div class="flex justify-between sm:mt-[1vw] mt-[3vw] items-center">
-                    <h1 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h1>
+                    <h3 class="sm:text-[1.042vw] text-[3.721vw] font-semibold">Cloud Security Hackathon</h3>
                     <p class="sm:text-[0.833vw] text-[2.791vw] sm:p-[0.521vw] p-[2.326vw] bg-opacity-5 bg-main rounded-full text-main font-semibold">Cloud Engineer</p>
                 </div>
                 <div class="flex sm:space-x-[1.042vw] space-x-[2.326vw] mt-[0.5vw]">
@@ -407,11 +409,16 @@
         const sidebar = document.getElementById('sidebar');
         const hamburgerBtn = document.getElementById('hamburger');
         const closeBtn = document.getElementById('close');
-    
+        const nav = document.querySelector('nav'); // Ambil elemen nav
+        
         // Fungsi untuk membuka sidebar
         function openSidebar() {
             sidebar.classList.add('open');
             document.body.classList.add('no-scroll');
+            
+            // Menghapus class 'fixed' pada nav saat sidebar dibuka
+            nav.classList.remove('fixed');
+            section.getElementById('fixed');
             
             // Optional: Tambahkan overlay
             const overlay = document.createElement('div');
@@ -422,11 +429,14 @@
             overlay.offsetHeight;
             overlay.classList.add('active');
         }
-    
+        
         // Fungsi untuk menutup sidebar
         function closeSidebar() {
             sidebar.classList.remove('open');
             document.body.classList.remove('no-scroll');
+            
+            // Menambahkan kembali class 'fixed' pada nav saat sidebar ditutup
+            nav.classList.add('fixed');
             
             // Optional: Hapus overlay dengan animasi
             const overlay = document.querySelector('.sidebar-overlay');
@@ -437,11 +447,10 @@
                 });
             }
         }
-    
+        
         // Event listeners untuk hamburger button dan close button
         hamburgerBtn.addEventListener('click', openSidebar);
         closeBtn.addEventListener('click', closeSidebar);
-    
     </script>
     
     <script>
